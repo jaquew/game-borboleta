@@ -73,14 +73,18 @@ body{
 
 .controles{
   color: #fff;
-  background-color: blue;
-  font-size: 20px;
+  background-color: #56bb3d;
+  font-size: 18px;
   padding: 5px;
   border: 1px solid #000; 
+  border-radius: 10px;
   margin: 5px;
+}
+.controles:hover{
+  background-color: #27551c;
 }
 
 #controles{
   display: flex;
-  justify-items: end;
+  justify-content: flex-end;
 }

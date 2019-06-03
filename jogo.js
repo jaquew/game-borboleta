@@ -46,11 +46,6 @@ var cronometro = setInterval(function() {
 
 // Posição das borboletas
 function posicaoRandom(){
-  console.log("posição random ativada")
-  console.log("tempo: " + tempo)
-  console.log("cria borboleta: " + criaborboleta)
-
-
 
   // remover o elemento borboleta, caso exista
   if (document.getElementById("borboleta")) {
@@ -113,7 +108,6 @@ function tamanhoAleatorio() {
       return "borboleta3"
 
   }
-  
 }
 
 // Orientação Direita/Esquerda
