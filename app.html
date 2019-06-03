@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <script src="jogo.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <title>Pega Borboleta</title>
+</head>
+
+<body onresize="ajustaTamanhoJogo()">
+  <div id="controles">
+      <button class="controles" onclick="pause()">Pausar</button>
+    <button class="controles" onclick="continuar()">Continuar</button>
+  </div>
+
+  <div class="painel">
+    <div class="vidas">
+      <img id="v1" src="imagens/coracao_cheio.png" alt=""> 
+      <img id="v2"src="imagens/coracao_cheio.png" alt="">  
+      <img id="v3"src="imagens/coracao_cheio.png" alt="">   
+    </div>
+    <div class="cronometro">
+
+      Tempo restante: <span id="cronometro"></span>
+      
+    </div>
+ 
+  </div>
+
+  <script>
+	var criaborboleta = setInterval(posicaoRandom, borboleta_tempo)
+	
+	// tempo inicial
+  document.getElementById("cronometro").innerHTML = tempo;
+  
+
+
+  // função pausa
+  function pause(){
+    clearInterval(criaborboleta)
+    clearInterval(cronometro)
+  }
+
+
+  //função continua
+  function continuar(){
+    criaborboleta = setInterval(posicaoRandom, borboleta_tempo)
+    cronometro = setInterval(function() {
+  tempo -= 1;
+  
+  if (tempo <= 0) {
+    clearInterval(cronometro)
+    clearInterval(criaborboleta)
+    window.location.href = "fim_de_jogo.html?"+"vitoria"
+  } else {
+    document.getElementById("cronometro").innerHTML = tempo;
+  }
+}, 1000);
+
+  }
+
+  </script>
+</body>
+</html>

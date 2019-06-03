@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pega Borboleta</title>
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="imagens/borboletaicon.png">
+
+
+</head>
+<body>
+    <div id="bg-opacity">
+    <div class="container">
+        <div class="row h-75">
+            <div class="col m-auto col-lg-9">
+                <img class="img-fluid mh-75" src="" id="imagemRes" alt="">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 m-auto">
+                <div class="d-flex justify-content-around">
+                    <button type="button" class="btn btn-light btn-outline-primary btn-lg" onclick="window.history.back()">Jogar Novamente</button>
+
+                    <button type="button" class="btn btn-light btn-outline-dark btn-lg" onclick="window.location.href = 'index.html'">Escolher Nível</button>
+                    
+                </div>
+            </div>
+        </div>
+
+    </div>
+    </div>
+
+    <script>
+        if (window.location.search == "?vitoria") {
+            document.getElementById("imagemRes").src = "imagens/vitoria.png"
+        
+        } else if (window.location.search == "?derrota") {
+            document.getElementById("imagemRes").src = "imagens/derrota.png"
+        }
+        
+    </script>
+</body>
+
+</html>

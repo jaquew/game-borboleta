@@ -1,0 +1,86 @@
+html {
+	cursor: url(imagens/rede.png) 30 30, auto;
+	height: 100vh;
+}
+
+body{
+  background: url(imagens/bg.jpg) no-repeat;
+  background-size: cover;
+  height: 100vh;
+  margin: 0;
+}
+#bg-opacity{
+  margin: 0;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* classes de tamanhos */
+.borboleta1{
+  height: 70px;
+  width: 70px;
+}
+.borboleta2{
+  height: 95px;
+  width: 95px;
+}
+.borboleta3{
+  height: 120px;
+  width: 120px;
+  
+}
+
+/* classe de orientação */
+.ladoA {
+  transform: scaleX(1); /*não será alterado, não é necessário constar*/
+}
+.ladoB {
+  transform: scaleX(-1); /*Inverte horizontalmente*/
+}
+
+/* classe do cenário */
+.painel {
+  position: absolute;
+  width: 190px;
+  padding: 10px;
+  left: 0;
+  bottom: 0;
+  border-top: solid 1px #fff;
+  background-color: #fff;
+  opacity: 0.7;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.cronometro{
+  font-size: 20px;
+  font-weight: bold;
+
+}
+
+#resultado{
+  position: absolute;
+  top: 50%;
+  left: 35%;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: italic;
+}
+
+.container{
+  height: 100%;
+}
+
+.controles{
+  color: #fff;
+  background-color: blue;
+  font-size: 20px;
+  padding: 5px;
+  border: 1px solid #000; 
+  margin: 5px;
+}
+
+#controles{
+  display: flex;
+  justify-items: end;
+}
